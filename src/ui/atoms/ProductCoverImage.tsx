@@ -1,0 +1,1 @@
+export const ProductCoverImage = ({ src, alt }:{src:string; alt:string}) => { return(<div><img width={320} height={320} alt={alt} src={src}/></div>)}
