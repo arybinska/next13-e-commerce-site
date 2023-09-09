@@ -41,7 +41,10 @@
 			}
 		],
 
-		"import/no-duplicates": ["error", { "prefer-inline": true }],
+		"import/no-duplicates": [
+			"error",
+			{ "prefer-inline": true }
+		],
 
 		// false negatives
 		"import/namespace": ["off"],
@@ -57,18 +60,27 @@
 		"@typescript-eslint/require-await": "off",
 
 		// make sure to `await` inside try…catch
-		"@typescript-eslint/return-await": ["error", "in-try-catch"],
+		"@typescript-eslint/return-await": [
+			"error",
+			"in-try-catch"
+		],
 
 		// allow unused vars prefixed with `_`
 		"@typescript-eslint/no-unused-vars": [
 			"error",
-			{ "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_"
+			}
 		],
 
 		// numbers and booleans are fine in template strings
 		"@typescript-eslint/restrict-template-expressions": [
 			"error",
-			{ "allowNumber": true, "allowBoolean": true }
+			{
+				"allowNumber": true,
+				"allowBoolean": true
+			}
 		]
 	},
 	"overrides": [
@@ -79,5 +91,6 @@
 			}
 		}
 	],
-	"ignorePatterns": ["*.js", "*.jsx"]
+	"ignorePatterns": ["*.js", "*.jsx"],
+	"workingDirectories": ["<rootDir>/src"]
 }
