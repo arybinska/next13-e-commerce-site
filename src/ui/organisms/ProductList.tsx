@@ -1,7 +1,26 @@
-import { ProductListItem } from "@/ui/molecules/ProductListItem"
-import { ProductItemType } from "../types"
+import { type ProductItemType } from "../types";
+import { ProductListItem } from "@/ui/molecules/ProductListItem";
 
-export const ProductList =({products}:{products:ProductItemType[]}) => { return (      <ul className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-{products.map((product) => <li key={product.id} className="flex flex-col items-center justify-between p-4"><ProductListItem product={product}/></li>)}
+export const ProductList = ({
+	products,
+}: {
+	products: ProductItemType[];
+}) => {
+	return (
+		<div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+			<h2 className="sr-only">Products</h2>
 
-</ul>)}
+			<div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+				{products.map((product) => (
+					<a
+						key={product.id}
+						href={product.coverImage.src}
+						className="group"
+					>
+						<ProductListItem product={product} />
+					</a>
+				))}
+			</div>
+		</div>
+	);
+};
