@@ -1,18 +1,19 @@
-{
-	"$schema": "https://json.schemastore.org/eslintrc.json",
-	"plugins": ["@typescript-eslint", "import"],
-	"parserOptions": {
-		"project": "tsconfig.json"
+module.exports = {
+	$schema: "https://json.schemastore.org/eslintrc.json",
+	plugins: ["@typescript-eslint", "import"],
+	parserOptions: {
+		project: "tsconfig.json",
+		tsconfigRootDir: __dirname,
 	},
-	"extends": [
+	extends: [
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"plugin:import/recommended",
 		"plugin:import/typescript",
 		"prettier",
-		"next/core-web-vitals"
+		"next/core-web-vitals",
 	],
-	"rules": {
+	rules: {
 		// sort imports
 		"import/order": "error",
 
@@ -26,19 +27,19 @@
 		"@typescript-eslint/ban-types": [
 			"error",
 			{
-				"types": {
-					"{}": false
-				}
-			}
+				types: {
+					"{}": false,
+				},
+			},
 		],
 
 		"@typescript-eslint/consistent-type-imports": [
 			"error",
 			{
-				"prefer": "type-imports",
-				"fixStyle": "inline-type-imports",
-				"disallowTypeAnnotations": false
-			}
+				prefer: "type-imports",
+				fixStyle: "inline-type-imports",
+				disallowTypeAnnotations: false,
+			},
 		],
 
 		"import/no-duplicates": ["error", { "prefer-inline": true }],
@@ -63,27 +64,27 @@
 		"@typescript-eslint/no-unused-vars": [
 			"error",
 			{
-				"argsIgnorePattern": "^_",
-				"varsIgnorePattern": "^_"
-			}
+				argsIgnorePattern: "^_",
+				varsIgnorePattern: "^_",
+			},
 		],
 
 		// numbers and booleans are fine in template strings
 		"@typescript-eslint/restrict-template-expressions": [
 			"error",
 			{
-				"allowNumber": true,
-				"allowBoolean": true
-			}
-		]
+				allowNumber: true,
+				allowBoolean: true,
+			},
+		],
 	},
-	"overrides": [
+	overrides: [
 		{
-			"files": ["src/app/**/*.ts?(x)"],
-			"rules": {
-				"import/no-default-export": "off"
-			}
-		}
+			files: ["src/app/**/*.ts?(x)"],
+			rules: {
+				"import/no-default-export": "off",
+			},
+		},
 	],
-	"ignorePatterns": ["*.js", "*.jsx"]
-}
+	ignorePatterns: ["*.js", "*.jsx"],
+};
