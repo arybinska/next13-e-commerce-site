@@ -47,7 +47,7 @@ const products: ProductItemType[] = [
 export default function Home() {
 	return (
 		<div className="bg-white">
-			<ProductList data-testid="products-list" products={products} />
+			<ProductList products={products} />
 		</div>
 	);
 }
