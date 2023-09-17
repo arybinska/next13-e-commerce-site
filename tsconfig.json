@@ -1,16 +1,15 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig.json",
 	"compilerOptions": {
-		"target": "ES2022",
-		"lib": ["ES2022"],
+		"target": "ES2021",
+		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"forceConsistentCasingInFileNames": true,
 		"noEmit": true,
 		"esModuleInterop": true,
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
@@ -33,6 +32,6 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"tailwind.config.ts"
-, "next.config.js"	],
+	],
 	"exclude": ["node_modules"]
 }
