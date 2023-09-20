@@ -1,9 +1,11 @@
-import Product from "./products/page";
+import { SuggestedProductsList } from "../ui/organisms/SuggestedProducts";
+import { HomepageSection } from "../ui/atoms/HomepageSection";
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<div>
-			<Product />
-		</div>
+		<>
+			<HomepageSection />
+			<SuggestedProductsList />
+		</>
 	);
 }

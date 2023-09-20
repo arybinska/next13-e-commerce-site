@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: [
-        "tailwindui.com",
-      ],
-      formats: ["image/avif", "image/webp"],
-    },
-}
+	pageExtensions: ["ts", "tsx", "mdx"],
+	experimental: {
+		typedRoutes: true,
+		mdxRs: true,
+	},
+	images: {
+		domains: ["tailwindui.com", "naszsklep-api.vercel.app"],
+		formats: ["image/avif", "image/webp"],
+	},
+};
 
-module.exports = nextConfig
+const withMDX = require("@next/mdx")();
+module.exports = withMDX(nextConfig);
