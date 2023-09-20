@@ -18,7 +18,7 @@ export const ActiveLink = ({
 			href={href}
 			className={clsx(
 				`text-gray-500 transition hover:text-gray-500/75`,
-				isActive && `text-teal-500 underline`,
+				isActive && `border-b-black text-teal-500`,
 			)}
 		>
 			{children}

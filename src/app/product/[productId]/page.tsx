@@ -94,9 +94,9 @@ export default async function SingleProductPage({
 			<aside>
 				<Suspense fallback={"Ładowanie..."}>
 					<div className="mx-auto max-w-2xl lg:max-w-7xl ">
-						<h1 className="font-bold sm:text-lg">
+						<h3 className="font-bold sm:text-lg">
 							Inni także kupili:
-						</h1>
+						</h3>
 					</div>
 					<SuggestedProductsList />
 				</Suspense>
