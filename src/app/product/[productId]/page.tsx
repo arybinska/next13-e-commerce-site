@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Suspense } from "react";
 import { type Metadata } from "next/types";
 import {
@@ -7,6 +6,7 @@ import {
 } from "../../../api/products";
 import { formatPrice } from "../../../utils";
 import { SuggestedProductsList } from "../../../ui/organisms/SuggestedProducts";
+import { ProductImage } from "../../../ui/atoms/ProductImage";
 
 export const generateStaticParams = async () => {
 	const products = await getAllProducts();
@@ -47,14 +47,7 @@ export default async function SingleProductPage({
 	return (
 		<>
 			<div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
-				<div className="ml-5 h-full w-full object-cover object-center">
-					<Image
-						src={product.image}
-						alt={product.title}
-						width={500}
-						height={500}
-					/>
-				</div>
+				<ProductImage product={product} />
 				<div className="ml-10 mt-10 h-full w-full object-cover object-center">
 					<div className="lg:col-span-2 lg:pr-8">
 						<h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">

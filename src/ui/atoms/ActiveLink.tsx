@@ -8,7 +8,7 @@ export const ActiveLink = ({
 	href,
 	children,
 }: {
-	href: Route | `/products/${number}`;
+	href: Route;
 	children: ReactNode;
 }) => {
 	const pathname = usePathname();
