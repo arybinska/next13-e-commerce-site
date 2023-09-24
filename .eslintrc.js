@@ -77,6 +77,13 @@ module.exports = {
 				allowBoolean: true,
 			},
 		],
+		"no-restricted-imports": [
+			"error",
+			{
+				name: "next/router",
+				message: "Please use next/navigation instead.",
+			},
+		],
 	},
 	overrides: [
 		{
