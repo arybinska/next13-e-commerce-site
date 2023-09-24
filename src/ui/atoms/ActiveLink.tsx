@@ -13,13 +13,14 @@ export const ActiveLink = ({
 }) => {
 	const pathname = usePathname();
 	const isActive = pathname === href;
+	const activeClassName = "border-b-black text-teal-500";
 	return (
 		<Link
 			href={href}
 			aria-current
 			className={clsx(
 				`text-gray-500 transition hover:text-gray-500/75`,
-				isActive && `border-b-black text-teal-500`,
+				isActive && activeClassName,
 			)}
 		>
 			{children}
