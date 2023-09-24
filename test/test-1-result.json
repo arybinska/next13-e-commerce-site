@@ -1,0 +1,135 @@
+{
+	"config": {
+		"configFile": "C:\\Users\\aflor\\Desktop\\next13masters\\testy e2e\\next13masters-e2e-tets\\playwright.config.ts",
+		"rootDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets",
+		"forbidOnly": false,
+		"fullyParallel": false,
+		"globalSetup": null,
+		"globalTeardown": null,
+		"globalTimeout": 0,
+		"grep": {},
+		"grepInvert": null,
+		"maxFailures": 0,
+		"metadata": {
+			"actualWorkers": 1,
+			"totalTime": 4801.324
+		},
+		"preserveOutput": "always",
+		"reporter": [
+			["line", null],
+			[
+				"json",
+				{
+					"outputFile": "test-results.json"
+				}
+			]
+		],
+		"reportSlowTests": {
+			"max": 5,
+			"threshold": 15000
+		},
+		"quiet": false,
+		"projects": [
+			{
+				"outputDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets/test-results",
+				"repeatEach": 1,
+				"retries": 0,
+				"id": "Chromium",
+				"name": "Chromium",
+				"testDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets",
+				"testIgnore": [],
+				"testMatch": ["**/*.@(spec|test).?(c|m)[jt]s?(x)"],
+				"timeout": 10000
+			}
+		],
+		"shard": null,
+		"updateSnapshots": "missing",
+		"version": "1.37.1",
+		"workers": 1,
+		"webServer": null
+	},
+	"suites": [
+		{
+			"title": "tests\\1.spec.ts",
+			"file": "tests/1.spec.ts",
+			"column": 0,
+			"line": 0,
+			"specs": [],
+			"suites": [
+				{
+					"title": "Module 1",
+					"file": "tests/1.spec.ts",
+					"line": 6,
+					"column": 6,
+					"specs": [
+						{
+							"title": "global tools installed correctly",
+							"ok": true,
+							"tags": [],
+							"tests": [
+								{
+									"timeout": 10000,
+									"annotations": [],
+									"expectedStatus": "passed",
+									"projectId": "Chromium",
+									"projectName": "Chromium",
+									"results": [
+										{
+											"workerIndex": 0,
+											"status": "passed",
+											"duration": 371,
+											"errors": [],
+											"stdout": [],
+											"stderr": [],
+											"retry": 0,
+											"startTime": "2023-09-24T15:05:05.962Z",
+											"attachments": []
+										}
+									],
+									"status": "expected"
+								}
+							],
+							"id": "1fd9101fa0fd98ff707f-b050c14f7bf5d975c29f",
+							"file": "tests/1.spec.ts",
+							"line": 7,
+							"column": 6
+						},
+						{
+							"title": "products list UI implemented",
+							"ok": true,
+							"tags": [],
+							"tests": [
+								{
+									"timeout": 10000,
+									"annotations": [],
+									"expectedStatus": "passed",
+									"projectId": "Chromium",
+									"projectName": "Chromium",
+									"results": [
+										{
+											"workerIndex": 0,
+											"status": "passed",
+											"duration": 3291,
+											"errors": [],
+											"stdout": [],
+											"stderr": [],
+											"retry": 0,
+											"startTime": "2023-09-24T15:05:06.335Z",
+											"attachments": []
+										}
+									],
+									"status": "expected"
+								}
+							],
+							"id": "1fd9101fa0fd98ff707f-7a3e3a79b2be349b5180",
+							"file": "tests/1.spec.ts",
+							"line": 51,
+							"column": 6
+						}
+					]
+				}
+			]
+		}
+	],
+	"errors": []
+}

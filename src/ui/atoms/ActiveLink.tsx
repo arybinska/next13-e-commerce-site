@@ -8,7 +8,7 @@ export const ActiveLink = ({
 	href,
 	children,
 }: {
-	href: Route | `/pagination/${number}`;
+	href: Route | `/products/${number}`;
 	children: ReactNode;
 }) => {
 	const pathname = usePathname();

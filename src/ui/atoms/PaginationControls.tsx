@@ -28,9 +28,9 @@ export const PaginationControls = ({
 				<Link
 					className={clsx(
 						`inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180`,
-						!hasPrevPage && "opacity-50" && "cursor-not-allowed",
+						!hasPrevPage && "cursor-not-allowed",
 					)}
-					href={`/pagination/${page - 1}`}
+					href={`/products/${page - 1}`}
 				>
 					<span className="sr-only">Next Page</span>
 					<svg
@@ -54,9 +54,9 @@ export const PaginationControls = ({
 				<Link
 					className={clsx(
 						`inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180`,
-						!hasNextPage && "opacity-50" && "cursor-not-allowed",
+						!hasNextPage && "cursor-not-allowed",
 					)}
-					href={`/pagination/${page + 1}`}
+					href={`/products/${page + 1}`}
 				>
 					<span className="sr-only">Next Page</span>
 					<svg

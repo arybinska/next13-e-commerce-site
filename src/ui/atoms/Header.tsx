@@ -27,12 +27,7 @@ export const Header = () => {
 								<ActiveLink href="/">Home</ActiveLink>
 							</li>
 							<li>
-								<ActiveLink href="/products">All</ActiveLink>
-							</li>
-							<li>
-								<ActiveLink href="/pagination/1">
-									Pagination
-								</ActiveLink>
+								<ActiveLink href="/products/1">All</ActiveLink>
 							</li>
 						</ul>
 					</nav>

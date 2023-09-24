@@ -18,7 +18,6 @@ export default async function ProductsByPage({
 	const allProducts = await getProductsCount();
 	const start = (Number(page) - 1) * Number(per_page);
 	const end = start + Number(per_page);
-
 	return (
 		<>
 			<Suspense fallback="Ładowanie…">
