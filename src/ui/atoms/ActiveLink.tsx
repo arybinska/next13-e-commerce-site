@@ -8,7 +8,7 @@ export const ActiveLink = ({
 	href,
 	children,
 }: {
-	href: Route | `/products/${number}`;
+	href: Route | `/pagination/${number}`;
 	children: ReactNode;
 }) => {
 	const pathname = usePathname();
@@ -16,6 +16,7 @@ export const ActiveLink = ({
 	return (
 		<Link
 			href={href}
+			aria-current
 			className={clsx(
 				`text-gray-500 transition hover:text-gray-500/75`,
 				isActive && `border-b-black text-teal-500`,

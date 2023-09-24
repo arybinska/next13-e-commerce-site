@@ -30,7 +30,9 @@ export const Header = () => {
 								<ActiveLink href="/products">All</ActiveLink>
 							</li>
 							<li>
-								<ActiveLink href="/products/1">Pagination</ActiveLink>
+								<ActiveLink href="/pagination/1">
+									Pagination
+								</ActiveLink>
 							</li>
 						</ul>
 					</nav>

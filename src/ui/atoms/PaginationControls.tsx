@@ -21,14 +21,14 @@ export const PaginationControls = ({
 	return (
 		<div className="mx-auto mb-5 max-w-sm">
 			<div
-				aria-label="Pagination"
+				aria-label="pagination"
 				className="flex items-center justify-center gap-3"
 			>
 				<button
 					className="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
 					disabled={!hasPrevPage}
 					onClick={() => {
-						router.push(`/products/${page - 1}`);
+						router.push(`/pagination/${page - 1}`);
 					}}
 				>
 					<span className="sr-only">Next Page</span>
@@ -54,7 +54,7 @@ export const PaginationControls = ({
 					className="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
 					disabled={!hasNextPage}
 					onClick={() => {
-						router.push(`/products/${page + 1}`);
+						router.push(`/pagination/${page + 1}`);
 					}}
 				>
 					<span className="sr-only">Next Page</span>
