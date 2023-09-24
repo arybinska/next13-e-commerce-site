@@ -17,7 +17,7 @@ export const ActiveLink = ({
 	return (
 		<Link
 			href={href}
-			aria-current
+			{...(isActive && { "aria-current": "page" })}
 			className={clsx(
 				`text-gray-500 transition hover:text-gray-500/75`,
 				isActive && activeClassName,
