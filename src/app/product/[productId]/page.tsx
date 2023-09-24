@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { type Metadata } from "next/types";
 import {
+	getAllProducts,
 	getProductById,
-	getProductsList,
 } from "../../../api/products";
 import { formatPrice } from "../../../utils";
 import { SuggestedProductsList } from "../../../ui/organisms/SuggestedProducts";
 
 export const generateStaticParams = async () => {
-	const products = await getProductsList();
+	const products = await getAllProducts();
 	return products.map((product) => ({
 		productId: product.id,
 	}));

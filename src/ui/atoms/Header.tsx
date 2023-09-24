@@ -29,6 +29,9 @@ export const Header = () => {
 							<li>
 								<ActiveLink href="/products">All</ActiveLink>
 							</li>
+							<li>
+								<ActiveLink href="/products/1">Pagination</ActiveLink>
+							</li>
 						</ul>
 					</nav>
 
