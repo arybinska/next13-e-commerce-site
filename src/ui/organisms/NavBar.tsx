@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { ActiveLink } from "./ActiveLink";
+import { ShoppingCart } from "lucide-react";
+import { ActiveLink } from "../atoms/ActiveLink";
+
+// const navLinks = [
+// 	{ href: "/", label: "Home" },
+// 	{ href: "/products/1", label: "All" },
+// 	{ href: "/", label: "T-shirt" },
+// 	{ href: "/", label: "Hoodies" },
+// 	{ href: "/", label: "Accessories" },
+// ];
 
 export const Header = () => {
 	return (
@@ -27,30 +36,43 @@ export const Header = () => {
 								<ActiveLink href="/">Home</ActiveLink>
 							</li>
 							<li>
-								<ActiveLink href="/products/1">All</ActiveLink>
+								<ActiveLink href="/products">All</ActiveLink>
+							</li>
+							<li>
+								<ActiveLink href="/#">T-shirt</ActiveLink>
+							</li>
+							<li>
+								<ActiveLink href="/#">Hoodies</ActiveLink>
+							</li>
+							<li>
+								<ActiveLink href="/#">Accessories</ActiveLink>
 							</li>
 						</ul>
 					</nav>
-
-					<div className="flex items-center gap-4">
-						<button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
-							<span className="sr-only">Toggle menu</span>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								className="h-5 w-5"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								strokeWidth="2"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M4 6h16M4 12h16M4 18h16"
-								/>
-							</svg>
-						</button>
-					</div>
+				</div>
+				<div className="flex items-center gap-4">
+					<Link href="/cart">
+						<ShoppingCart className="" aria-hidden="true" />
+					</Link>
+				</div>
+				<div className="flex items-center gap-4">
+					<button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+						<span className="sr-only">Toggle menu</span>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth="2"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</header>
