@@ -1,14 +1,13 @@
-query ProductsGetList {
-	products(first: 10) {
-		id
-		name
-		description
-		categories(first: 1) {
-			name
+query ProductsGetList($search: String, $first: Int, $skip: Int) {
+	products(first: $first, skip: $skip, where: { _search: $search }) {
+		...ProductListItem
+	}
+	productsConnection(where: { _search: $search }) {
+		aggregate {
+			count
 		}
-		images(first: 1) {
-			url
+		pageInfo {
+			pageSize
 		}
-		price
 	}
 }

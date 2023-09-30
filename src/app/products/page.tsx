@@ -1,15 +1,14 @@
-import { Suspense } from "react";
-import { getAllProducts } from "../../api/products";
-import { ProductList } from "../../ui/organisms/ProductList";
+import { type Metadata } from "next";
 
-export default async function ProductsPage() {
-	const products = await getAllProducts();
+import Products from "./[pageNumber]/page";
 
-	return (
-		<>
-			<Suspense fallback="Ładowanie…">
-				<ProductList products={products.slice(0, 4)} />
-			</Suspense>
-		</>
-	);
+export async function generateMetadata(): Promise<Metadata> {
+	return {
+		title: `Products list`,
+		openGraph: {
+			title: `Products list`,
+		},
+	};
 }
+
+export default Products;

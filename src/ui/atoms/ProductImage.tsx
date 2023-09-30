@@ -1,18 +1,17 @@
-import Image from "next/image";
-import { type ProductItemType } from "../types";
+import NextImage from "next/image";
+
+type ProductListItemImageProps = {
+	src: string;
+	alt: string;
+};
+
 export const ProductImage = ({
-	product,
-}: {
-	product: ProductItemType;
-}) => {
+	src,
+	alt,
+}: ProductListItemImageProps) => {
 	return (
 		<div className="ml-5 h-full w-full object-cover object-center">
-			<Image
-				src={product.image}
-				alt={product.title}
-				width={500}
-				height={500}
-			/>
+			<NextImage src={src} alt={alt} width={500} height={500} />
 		</div>
 	);
 };
