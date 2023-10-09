@@ -1,13 +1,27 @@
 fragment ProductListItem on Product {
-	id
-	name
-	slug
-	description
-	categories(first: 1) {
-		name
-	}
-	images(first: 1) {
-		url
-	}
-	price
+    id
+    name
+    price
+    slug
+    description
+    variants {
+        ... on ProductSizeColorVariant {
+            id
+            name
+            color
+        }
+    }
+    images {
+        url(transformation: {})
+        width
+        height
+    }
+    categories {
+        name
+        slug
+    }
+    collections {
+        name
+        slug
+    }
 }

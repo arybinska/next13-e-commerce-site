@@ -61,7 +61,7 @@ export const Header = async () => {
 						fill="currentColor"
 					/>
 				</svg>
-				<nav>
+				<nav role="navigation">
 					<div className="flex flex-1 items-center justify-end md:justify-between">
 						<ul className="flex items-center gap-6 text-sm">
 							{menuItems.map((item) => (
