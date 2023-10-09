@@ -1,3 +1,5 @@
+import { AdditionalProductsList } from "../organisms/AdditionalProductsList";
+
 export const HomepageSection = () => {
 	return (
 		<section className="bg-teal-50 text-black">
@@ -214,6 +216,7 @@ export const HomepageSection = () => {
 						</div>
 					</div>
 				</div>
+				<AdditionalProductsList />
 			</div>
 		</section>
 	);

@@ -1,0 +1,27 @@
+fragment ProductListItem on Product {
+    id
+    name
+    price
+    slug
+    description
+    variants {
+        ... on ProductSizeColorVariant {
+            id
+            name
+            color
+        }
+    }
+    images {
+        url(transformation: {})
+        width
+        height
+    }
+    categories {
+        name
+        slug
+    }
+    collections {
+        name
+        slug
+    }
+}

@@ -1,21 +1,24 @@
 import Link from "next/link";
-import { type ProductItemType } from "../types";
 import { ProductCoverImage } from "../atoms/ProductCoverImage";
 import { ProductListItemDescription } from "../atoms/ProductListItemDescription";
+import { type ProductListItemFragment } from "../../gql/graphql";
 
 type ProductListItemProps = {
-	product: ProductItemType;
+	product: ProductListItemFragment;
 };
 
 export const ProductListItem = ({
 	product,
 }: ProductListItemProps) => {
 	return (
-		<div className="relative">
-			<Link href={`/product/${product.id}`}>
+		<li
+			key={product.id}
+			className="group relative list-none overflow-hidden"
+		>
+			<Link href={`/product/${product.slug}`}>
 				<ProductCoverImage product={product} />
 				<ProductListItemDescription product={product} />
 			</Link>
-		</div>
+		</li>
 	);
 };

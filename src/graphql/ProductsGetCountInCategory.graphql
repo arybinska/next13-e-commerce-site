@@ -1,0 +1,9 @@
+query ProductsGetCountInCategory($categorySlug: String) {
+	productsConnection(
+		where: { categories_some: { _search: $categorySlug } }
+	) {
+		aggregate {
+			count
+		}
+	}
+}

@@ -1,23 +1,19 @@
-import { type ProductItemType } from "../types";
 import { ProductListItem } from "../molecules/ProductListItem";
+import { type ProductListItemFragment } from "../../gql/graphql";
 
 export const ProductList = ({
 	products,
 }: {
-	products: ProductItemType[];
+	products: ProductListItemFragment[];
 }) => {
 	return (
-		<div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-			<div
-				data-testid="products-list"
-				className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-			>
-				{products.map((product) => (
-					<li key={product.id} className="list-none">
-						<ProductListItem product={product} />
-					</li>
-				))}
-			</div>
+		<div
+			data-testid="products-list"
+			className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8"
+		>
+			{products.map((product) => (
+				<ProductListItem key={product.id} product={product} />
+			))}
 		</div>
 	);
 };
