@@ -4,6 +4,7 @@ const nextConfig = {
 	experimental: {
 		typedRoutes: true,
 		mdxRs: true,
+		serverActions: true,
 	},
 	images: {
 		domains: [
@@ -39,6 +40,11 @@ const nextConfig = {
 				source: "/collections/:collectionSlug",
 				destination: "/collections/:collectionSlug/1",
 				permanent: true,
+			},
+			{
+				source: "/search",
+				destination: "/search/1",
+				permanent: false,
 			},
 		];
 	},

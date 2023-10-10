@@ -77,6 +77,15 @@ module.exports = {
 				allowBoolean: true,
 			},
 		],
+		// Server Actions `action={…}`
+		"@typescript-eslint/no-misused-promises": [
+			"error",
+			{
+				checksVoidReturn: {
+					attributes: false,
+				},
+			},
+		],
 		"no-restricted-imports": [
 			"error",
 			{

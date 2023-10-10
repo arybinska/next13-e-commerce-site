@@ -35,7 +35,6 @@ export default async function Products({
 	params: { pageNumber = "1" },
 }: {
 	params: { pageNumber: string };
-	searchParams?: { [_key: string]: string | string[] | undefined };
 }) {
 	let currentPage = parseInt(pageNumber);
 	const perPage = PER_PAGINATION;
@@ -46,7 +45,6 @@ export default async function Products({
 
 	const response = await getProducts(currentPage, perPage, "");
 	const totalItems = response.pagination.totalItems;
-
 	return (
 		<>
 			{response.products.length === 0 && (

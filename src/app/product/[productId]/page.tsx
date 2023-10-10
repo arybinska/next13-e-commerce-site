@@ -4,14 +4,15 @@ import { notFound } from "next/navigation";
 import { formatPrice } from "../../../utils";
 import { SuggestedProductsList } from "../../../ui/organisms/SuggestedProducts";
 import { ProductImage } from "../../../ui/atoms/ProductImage";
-import { getProductBySlug } from "../../../api/getProductBySlug";
+import { getProductById } from "@/api/getProductById";
+import { AddToCart } from "@/ui/atoms/AddToCart";
 
 export const generateMetadata = async ({
 	params,
 }: {
-	params: { productSlug: string };
+	params: { productId: string };
 }): Promise<Metadata> => {
-	const product = await getProductBySlug(params.productSlug);
+	const product = await getProductById(params.productId);
 	return {
 		title: `${product?.name} - E-commerce site`,
 		description: `${product?.description}`,
@@ -33,9 +34,9 @@ export const generateMetadata = async ({
 export default async function SingleProductPage({
 	params,
 }: {
-	params: { productSlug: string };
+	params: { productId: string };
 }) {
-	const product = await getProductBySlug(params.productSlug);
+	const product = await getProductById(params.productId);
 	if (!product) {
 		throw notFound();
 	}
@@ -68,9 +69,7 @@ export default async function SingleProductPage({
 							</div>
 						</div>
 					</div>
-					<button className="mb-5 inline-block justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-2 text-center font-medium text-white hover:bg-indigo-700">
-						Dodaj do koszyka
-					</button>
+						<AddToCart product={product} />
 				</div>
 			</div>
 
