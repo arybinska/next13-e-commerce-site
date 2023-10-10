@@ -37,7 +37,7 @@ function createCart() {
 }
 
 export async function addItemToCart(
-	orderId: string,
+	cartId: string,
 	productId: string,
 ) {
 	const { product } = await executeGraphql(ProductGetByIdDocument, {
@@ -47,7 +47,7 @@ export async function addItemToCart(
 		throw new Error("Cannot find product");
 	}
 	await executeGraphql(CartAddProductDocument, {
-		orderId,
+		cartId,
 		productId,
 		total: product.price,
 	});
