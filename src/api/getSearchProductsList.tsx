@@ -12,7 +12,7 @@ type getProductListPromiseResponse = {
 };
 export const getSearchProductsList = async (
 	search: string,
-	page: number = 1,
+	page: number,
 	_take = PER_PAGE,
 ): Promise<getProductListPromiseResponse> => {
 

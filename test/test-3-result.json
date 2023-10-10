@@ -1,0 +1,396 @@
+{
+    "config": {
+      "configFile": "C:\\Users\\aflor\\Desktop\\next13masters\\testy e2e\\next13masters-e2e-tets\\playwright.config.ts",
+      "rootDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets",
+      "forbidOnly": false,
+      "fullyParallel": false,
+      "globalSetup": null,
+      "globalTeardown": null,
+      "globalTimeout": 0,
+      "grep": {},
+      "grepInvert": null,
+      "maxFailures": 0,
+      "metadata": {
+        "actualWorkers": 1,
+        "totalTime": 13019.877
+      },
+      "preserveOutput": "always",
+      "reporter": [
+        [
+          "line",
+          null
+        ],
+        [
+          "json",
+          {
+            "outputFile": "test-results.json"
+          }
+        ]
+      ],
+      "reportSlowTests": {
+        "max": 5,
+        "threshold": 15000
+      },
+      "quiet": false,
+      "projects": [
+        {
+          "outputDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets/test-results",
+          "repeatEach": 1,
+          "retries": 0,
+          "id": "Chromium",
+          "name": "Chromium",
+          "testDir": "C:/Users/aflor/Desktop/next13masters/testy e2e/next13masters-e2e-tets",
+          "testIgnore": [],
+          "testMatch": [
+            "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+          ],
+          "timeout": 10000
+        }
+      ],
+      "shard": null,
+      "updateSnapshots": "missing",
+      "version": "1.37.1",
+      "workers": 1,
+      "webServer": null
+    },
+    "suites": [
+      {
+        "title": "tests\\3.spec.ts",
+        "file": "tests/3.spec.ts",
+        "column": 0,
+        "line": 0,
+        "specs": [],
+        "suites": [
+          {
+            "title": "Module 3",
+            "file": "tests/3.spec.ts",
+            "line": 4,
+            "column": 6,
+            "specs": [
+              {
+                "title": "1. single product page implemented",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1169,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:31.732Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-fe5d6fd3b660c978adff",
+                "file": "tests/3.spec.ts",
+                "line": 5,
+                "column": 6
+              },
+              {
+                "title": "2. categories pagination",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1024,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:33.259Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-4ebc89a1536a18e9671f",
+                "file": "tests/3.spec.ts",
+                "line": 12,
+                "column": 6
+              },
+              {
+                "title": "3. active links for partial matches",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1092,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:34.284Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-7aa451ca5f292c65318e",
+                "file": "tests/3.spec.ts",
+                "line": 36,
+                "column": 6
+              },
+              {
+                "title": "4. collections",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1330,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:35.379Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-be92c46ce2e7fd49da83",
+                "file": "tests/3.spec.ts",
+                "line": 71,
+                "column": 6
+              },
+              {
+                "title": "4. ",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 9,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:36.710Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-c34a2a1245e384036850",
+                "file": "tests/3.spec.ts",
+                "line": 93,
+                "column": 6
+              },
+              {
+                "title": "5. related products",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1082,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:36.719Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-bec531760551854db20d",
+                "file": "tests/3.spec.ts",
+                "line": 97,
+                "column": 6
+              },
+              {
+                "title": "6. variants",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 9,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:37.802Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-5ac8df02f46010d206e2",
+                "file": "tests/3.spec.ts",
+                "line": 107,
+                "column": 6
+              },
+              {
+                "title": "7. ",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 9,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:37.812Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-b565dc991fe690689e78",
+                "file": "tests/3.spec.ts",
+                "line": 111,
+                "column": 6
+              },
+              {
+                "title": "8. search",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 1603,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:37.823Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-af3b7b6751ae171f2b16",
+                "file": "tests/3.spec.ts",
+                "line": 115,
+                "column": 6
+              },
+              {
+                "title": "9. delayed search",
+                "ok": true,
+                "tags": [],
+                "tests": [
+                  {
+                    "timeout": 10000,
+                    "annotations": [],
+                    "expectedStatus": "passed",
+                    "projectId": "Chromium",
+                    "projectName": "Chromium",
+                    "results": [
+                      {
+                        "workerIndex": 0,
+                        "status": "passed",
+                        "duration": 4690,
+                        "errors": [],
+                        "stdout": [],
+                        "stderr": [],
+                        "retry": 0,
+                        "startTime": "2023-10-09T21:12:39.428Z",
+                        "attachments": []
+                      }
+                    ],
+                    "status": "expected"
+                  }
+                ],
+                "id": "59b2f4158d3ae174973f-e427406105663961b38e",
+                "file": "tests/3.spec.ts",
+                "line": 160,
+                "column": 6
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "errors": []
+  }

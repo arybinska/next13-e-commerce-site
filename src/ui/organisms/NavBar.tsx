@@ -82,7 +82,8 @@ export const Header = async () => {
 				<div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 					<SearchInput />
 				</div>
-				<ShoppingCartIcon className="h-5 w-5" aria-hidden="true" />
+				<ActiveLink href="/cart" ><ShoppingCartIcon className="h-5 w-5" aria-hidden="true" /></ActiveLink>
+				
 
 				<div className="flex items-center gap-4">
 					<button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">

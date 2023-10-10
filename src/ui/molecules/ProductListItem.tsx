@@ -15,7 +15,7 @@ export const ProductListItem = ({
 			key={product.id}
 			className="group relative list-none overflow-hidden"
 		>
-			<Link href={`/product/${product.slug}`}>
+			<Link href={`/product/${product.id}`}>
 				<ProductCoverImage product={product} />
 				<ProductListItemDescription product={product} />
 			</Link>
