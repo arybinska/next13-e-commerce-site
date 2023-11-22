@@ -1,7 +1,9 @@
 import { PER_PAGE } from "../lib/consts";
-import { ProductsGetListDocument, type ProductListItemFragment } from "../gql/graphql";
+import {
+	ProductsGetListDocument,
+	type ProductListItemFragment,
+} from "../gql/graphql";
 import { executeGraphql } from "./graphqlApi";
-
 
 type getProductListPromiseResponse = {
 	products: ProductListItemFragment[];
@@ -15,9 +17,14 @@ export const getSearchProductsList = async (
 	page: number,
 	_take = PER_PAGE,
 ): Promise<getProductListPromiseResponse> => {
-
-	const graphqlResponse = await executeGraphql(ProductsGetListDocument, {
-		search,
+	const graphqlResponse = await executeGraphql({
+		query: ProductsGetListDocument,
+		variables: {
+			search,
+		},
+		headers: {
+			Authorization: `Bearer ${process.env.HYGRAPH_QUERY_TOKEN}`,
+		},
 	});
 
 	if (!graphqlResponse || !graphqlResponse.products) {

@@ -1,5 +1,16 @@
-mutation CartCreate {
-    createOrder(data: {total: 0, }) {
-        ...Cart
-    }
+mutation CartCreate($productId: ID!, $total: Int!) {
+	createOrder(
+		data: {
+			total: $total
+			orderItems: {
+				create: {
+					quantity: 1
+					total: $total
+					product: { connect: { id: $productId } }
+				}
+			}
+		}
+	) {
+		...Cart
+	}
 }

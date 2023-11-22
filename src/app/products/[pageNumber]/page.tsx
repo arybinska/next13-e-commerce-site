@@ -1,6 +1,5 @@
 import { type Metadata } from "next";
 import { PER_PAGINATION } from "../../../lib/consts";
-import { getProductsCount } from "../../../api/getProductsCount";
 import { ProductList } from "../../../ui/organisms/ProductList";
 import { getProducts } from "../../../api/getProducts";
 import { Pagination } from "../../../ui/organisms/Pagination";
@@ -18,18 +17,18 @@ export async function generateMetadata({
 	};
 }
 
-export const generateStaticParams = async () => {
-	const productsCount = await getProductsCount();
+// export const generateStaticParams = async () => {
+// 	const productsCount = await getProductsCount();
 
-	const numberOfPages = Math.ceil(productsCount / PER_PAGINATION);
-	const productPages = [];
-	for (let i = 0; i < numberOfPages; i++) {
-		productPages.push({
-			pageNumber: `${i + 1}`,
-		});
-	}
-	return productPages;
-};
+// 	const numberOfPages = Math.ceil(productsCount / PER_PAGINATION);
+// 	const productPages = [];
+// 	for (let i = 0; i < numberOfPages; i++) {
+// 		productPages.push({
+// 			pageNumber: `${i + 1}`,
+// 		});
+// 	}
+// 	return productPages;
+// };
 
 export default async function Products({
 	params: { pageNumber = "1" },

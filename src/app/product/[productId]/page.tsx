@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { formatPrice } from "../../../utils";
 import { SuggestedProductsList } from "../../../ui/organisms/SuggestedProducts";
 import { ProductImage } from "../../../ui/atoms/ProductImage";
-import { getProductById } from "@/api/getProductById";
-import { AddToCart } from "@/ui/atoms/AddToCart";
+import { getProductById } from "../../../api/getProductById";
+import { SubmitButton } from "../../../ui/atoms/SubmitButton";
+import { addProductToCartAction } from "./actions";
 
 export const generateMetadata = async ({
 	params,
@@ -69,7 +70,25 @@ export default async function SingleProductPage({
 							</div>
 						</div>
 					</div>
-						<AddToCart product={product} />
+					<div className="mt-10 flex items-center">
+						<form action={addProductToCartAction}>
+							<input
+								type="text"
+								name="productId"
+								value={product.id}
+								hidden
+								readOnly
+							/>
+							<input
+								type="number"
+								name="productPrice"
+								value={product.price}
+								hidden
+								readOnly
+							/>
+							<SubmitButton label={"ADD TO CART"} />
+						</form>
+					</div>
 				</div>
 			</div>
 

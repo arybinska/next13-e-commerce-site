@@ -19,14 +19,19 @@ export const getProducts = async (
 ): Promise<getProductListPromiseResponse> => {
 	const offset = take * (page - 1);
 
-	const graphqlResponse = await executeGraphql(
-		ProductsGetListDocument,
-		{
+	const graphqlResponse = await executeGraphql({
+		query: ProductsGetListDocument,
+		variables: {
 			first: take,
 			skip: offset,
 			search,
 		},
-	);
+		headers: {
+			Authorization: `Bearer ${process.env.HYGRAPH_QUERY_TOKEN}`,
+		},
+		// next: { revalidate: 15 },
+		cache: "no-store",
+	});
 
 	if (!graphqlResponse.products) {
 		return {

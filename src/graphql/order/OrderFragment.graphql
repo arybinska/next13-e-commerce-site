@@ -1,8 +1,12 @@
-fragment Cart on Order {
+fragment Order on Order {
 	id
+	email
+	total
 	orderItems {
 		id
+		total
 		quantity
+		createdAt
 		product {
 			...SingleProductItem
 		}

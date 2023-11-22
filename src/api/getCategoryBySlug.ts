@@ -4,10 +4,13 @@ import { executeGraphql } from "./graphqlApi";
 export const getProductsByCategorySlug = async (
 	slug: string,
 ): Promise<getCategoryBySlugPromiseResponse> => {
-	const graphqlResponse = await executeGraphql(
-		CategoryGetBySlugDocument,
-		{ slug },
-	);
+	const graphqlResponse = await executeGraphql({
+		query: CategoryGetBySlugDocument,
+		variables: { slug },
+		headers: {
+			Authorization: `Bearer ${process.env.HYGRAPH_QUERY_TOKEN}`,
+		},
+	});
 	if (
 		!graphqlResponse.categories ||
 		graphqlResponse.categories.length === 0 ||

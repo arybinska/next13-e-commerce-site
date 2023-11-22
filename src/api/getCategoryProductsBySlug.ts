@@ -13,14 +13,17 @@ export const getCategoryProductsBySlug = async (
 	const currentPage = page;
 	const offset = take * (currentPage - 1);
 
-	const graphqlResponse = await executeGraphql(
-		ProductsGetByCategorySlugDocument,
-		{
+	const graphqlResponse = await executeGraphql({
+		query: ProductsGetByCategorySlugDocument,
+		variables: {
 			first: take,
 			skip: offset,
 			slug,
 		},
-	);
+		headers: {
+			Authorization: `Bearer ${process.env.HYGRAPH_QUERY_TOKEN}`,
+		},
+	});
 
 	if (!graphqlResponse.products.length) {
 		return {

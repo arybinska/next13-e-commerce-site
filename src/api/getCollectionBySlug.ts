@@ -4,10 +4,13 @@ import { executeGraphql } from "./graphqlApi";
 export const getCollectionBySlug = async (
 	slug: string,
 ): Promise<getCollectionBySlugPromiseResponse> => {
-	const graphqlResponse = await executeGraphql(
-		CollectionGetBySlugDocument,
-		{ slug },
-	);
+	const graphqlResponse = await executeGraphql({
+		query: CollectionGetBySlugDocument,
+		variables: { slug },
+		headers: {
+			Authorization: `Bearer ${process.env.HYGRAPH_QUERY_TOKEN}`,
+		},
+	});
 
 	if (
 		!graphqlResponse.collections ||
