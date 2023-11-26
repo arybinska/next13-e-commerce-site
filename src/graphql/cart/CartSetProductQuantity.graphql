@@ -1,8 +1,0 @@
-mutation CartSetProductQuantity($itemId: ID!, $quantity: Int!) {
-	updateOrderItem(
-		where: { id: $itemId }
-		data: { quantity: $quantity }
-	) {
-		id
-	}
-}

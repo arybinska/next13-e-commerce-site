@@ -1,0 +1,9 @@
+fragment ReviewsItem on Review {
+	id
+	name
+	headline
+	email
+	content
+	rating
+	stage
+}

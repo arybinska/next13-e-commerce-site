@@ -4,6 +4,7 @@ import { ActiveLink } from "../atoms/ActiveLink";
 import { getAllCategories } from "../../api/getAllCategories";
 import { getAllCollections } from "../../api/getAllCollections";
 import { SearchInput } from "../atoms/SearchInput";
+import { getCartByFromCookies } from "../../api/cart";
 
 export type MenuItem = {
 	label: string;
@@ -19,6 +20,8 @@ export const Header = async () => {
 		" border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700";
 	const collections = await getAllCollections();
 	const categories = await getAllCategories();
+	const cart = await getCartByFromCookies();
+	const quantity = cart?.orderItems.length ?? 0;
 	const menuItems: MenuItem[] = [
 		{
 			label: "Home",
@@ -82,8 +85,10 @@ export const Header = async () => {
 				<div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 					<SearchInput />
 				</div>
-				<ActiveLink href="/cart" ><ShoppingCartIcon className="h-5 w-5" aria-hidden="true" /></ActiveLink>
-				
+				<ActiveLink href="/cart">
+					<ShoppingCartIcon className="h-5 w-5" aria-hidden="true" />
+					<span>{quantity}</span>
+				</ActiveLink>
 
 				<div className="flex items-center gap-4">
 					<button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
