@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { formatPrice } from "../../utils";
 import { ProductImage } from "../../ui/atoms/ProductImage";
 import { getCartByFromCookies } from "../../api/cart";
@@ -72,6 +73,7 @@ export default async function CartPage() {
 									<CartPaymentButton />
 								</div>
 							</div>
+							<Link href="/cart/details">Details</Link>
 						</div>
 					</div>
 				</div>

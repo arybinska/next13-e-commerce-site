@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IncrementProductQuantity } from "../../../ui/atoms/IncrementProductQuantity";
 import { getCartByFromCookies } from "../../../api/cart";
 import { formatPrice } from "../../../utils";
@@ -20,17 +21,24 @@ export default async function CartModalPage() {
 	return (
 		<CartModal>
 			<div className="p-6">
-				<h1 className="text-3xl">Order</h1>
-				<p>#{cart.id}</p>
+				<h1 className="text-3xl">Zamówienie</h1>
+				<p>Numer zamówienia: {cart.id}</p>
 				<ul className="flex w-full flex-col gap-5 py-6">
 					{cart.orderItems.map(
 						(item) =>
 							item.product && (
 								<li key={item.product.id}>
 									<article className="grid grid-cols-5 items-center">
-										<span className="col-span-3">
+										<span className="col-span-1">
 											{item.product.name}
 										</span>
+										<Image
+											className="col-span-1"
+											alt="product"
+											src={item.product.images[0]?.url ?? ""}
+											width={80}
+											height={80}
+										/>
 										<div className="col-span-1 self-center">
 											<IncrementProductQuantity
 												itemId={item.id}
@@ -38,7 +46,7 @@ export default async function CartModalPage() {
 												price={item.product.price}
 											/>
 										</div>
-										<span className="col-span-2 text-center">
+										<span className="col-span-1 text-center">
 											{formatPrice(item.product.price / 100)}
 										</span>
 										<div className="col-span-1">

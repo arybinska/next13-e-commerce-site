@@ -17,8 +17,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
+	modal,
 }: {
 	children: React.ReactNode;
+	modal: React.ReactNode;
 }) {
 	return (
 		<html lang="en" className={montserrat.variable}>
@@ -26,6 +28,7 @@ export default function RootLayout({
 				<Header />
 				<div className="min-h-full">{children}</div>
 				<Footer />
+				{modal}
 			</body>
 		</html>
 	);

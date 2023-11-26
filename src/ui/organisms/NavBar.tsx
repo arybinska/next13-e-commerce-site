@@ -21,7 +21,7 @@ export const Header = async () => {
 	const collections = await getAllCollections();
 	const categories = await getAllCategories();
 	const cart = await getCartByFromCookies();
-	const quantity = cart?.order?.orderItems.length ?? 0;
+	const quantity = cart?.orderItems.length ?? 0;
 	const menuItems: MenuItem[] = [
 		{
 			label: "Home",
