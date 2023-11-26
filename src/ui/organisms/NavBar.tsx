@@ -85,9 +85,9 @@ export const Header = async () => {
 				<div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 					<SearchInput />
 				</div>
-				<ActiveLink href="/cart">
+				<ActiveLink href="/cart" className="flex">
 					<ShoppingCartIcon className="h-5 w-5" aria-hidden="true" />
-					<span>{quantity}</span>
+					<span className="pl-1">{quantity}</span>
 				</ActiveLink>
 
 				<div className="flex items-center gap-4">

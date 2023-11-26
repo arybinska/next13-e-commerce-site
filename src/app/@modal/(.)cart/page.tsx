@@ -21,8 +21,8 @@ export default async function CartModalPage() {
 	return (
 		<CartModal>
 			<div className="p-6">
-				<h1 className="text-3xl">Zamówienie</h1>
-				<p>Numer zamówienia: {cart.id}</p>
+				<h1 className="text-3xl">Your Cart</h1>
+				<p>Order Number: {cart.id}</p>
 				<ul className="flex w-full flex-col gap-5 py-6">
 					{cart.orderItems.map(
 						(item) =>
@@ -47,7 +47,7 @@ export default async function CartModalPage() {
 											/>
 										</div>
 										<span className="col-span-1 text-center">
-											{formatPrice(item.product.price / 100)}
+											{formatPrice(item.product.price)}
 										</span>
 										<div className="col-span-1">
 											<CartDeleteProductButton itemId={item.id} />
@@ -59,7 +59,7 @@ export default async function CartModalPage() {
 					<li className="text-end text-2xl">
 						Total:{" "}
 						<span className="font-semibold">
-							{formatPrice(total / 100)}
+							{formatPrice(total)}
 						</span>
 					</li>
 					<li>

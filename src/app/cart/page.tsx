@@ -11,7 +11,11 @@ export default async function CartPage() {
 	const cart = await getCartByFromCookies();
 
 	if (!cart || !cart.orderItems[0]) return redirect("/");
-
+	const total = cart.orderItems.reduce(
+		(acc, item) =>
+			item.product ? acc + item.quantity * item.product.price : 0,
+		0,
+	);
 	return (
 		<div>
 			<section>
@@ -44,11 +48,11 @@ export default async function CartPage() {
 											)}
 
 											<div>
-												<h3 className="text-sm text-gray-900">
+												<h3 className="text-lg text-gray-900">
 													{item.product.name}
 												</h3>
 
-												<dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+												<dl className="text-m mt-0.5 space-y-px text-gray-600">
 													<div>{formatPrice(item.product.price)}</div>
 												</dl>
 											</div>
@@ -66,6 +70,12 @@ export default async function CartPage() {
 										</li>
 									);
 								})}
+								<li className="text-end text-2xl">
+									Total:{" "}
+									<span className="font-semibold">
+										{formatPrice(total)}
+									</span>
+								</li>
 							</ul>
 
 							<div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
@@ -73,7 +83,12 @@ export default async function CartPage() {
 									<CartPaymentButton />
 								</div>
 							</div>
-							<Link href="/cart/details">Details</Link>
+							<Link
+								href="/cart/details"
+								className="text-lg font-bold italic text-teal-500 hover:text-teal-300"
+							>
+								Details
+							</Link>
 						</div>
 					</div>
 				</div>
