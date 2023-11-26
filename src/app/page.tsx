@@ -5,7 +5,9 @@ export default function HomePage() {
 	return (
 		<>
 			<HomepageSection />
-			<SuggestedProductsList />
+			<aside className="border-y-4 p-10">
+				<SuggestedProductsList />
+			</aside>
 		</>
 	);
 }
